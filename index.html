@@ -2,26 +2,13 @@
 <html>
 
 <body>
-  <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
-  <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
-  <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
-
-  <div id="root"></div>
-
-  <script type="text/jsx">
-    class App extends React.Component {
-      render() {
-        return (
-          <input type="file" name="image" accept="image/*" capture="user"/>
-        );
-      }
-    }
-    ReactDOM.render(
-      <App/>,
-      document.getElementById('root')
-    );
+  <input type="file" name="image" accept="image/*" capture="user" onchange="loadFile(event)"/>
+  <img id="output"/>
+  <script>
+    var loadFile = function(event) {
+      var output = document.getElementById('output');
+      output.src = URL.createObjectURL(event.target.files[0]);
+    };
   </script>
-
 </body>
-
 </html>
