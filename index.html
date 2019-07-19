@@ -107,14 +107,11 @@
         getOrientation(input.files[0], function(orientation) {
 						// 1. get orientation
             srcOrientation=orientation
-            alert('orientation: ' + srcOrientation);
 
             // 2. get original
-						alert('outputting original...');
 						output.src = URL.createObjectURL(e.target.files[0]);
 
 						// 3. output reset image
-						alert('resetting... ');
 						resetOrientation(
 							output.src,
 							srcOrientation,
