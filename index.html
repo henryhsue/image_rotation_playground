@@ -6,10 +6,10 @@
   <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
   <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
 
-  <div id="hello-example"></div>
+  <div id="root"></div>
 
   <script type="text/jsx">
-    class HelloMessage extends React.Component {
+    class App extends React.Component {
       render() {
         return (
           <input type="file" name="image" accept="image/*" capture="user"/>
@@ -17,8 +17,8 @@
       }
     }
     ReactDOM.render(
-      <HelloMessage/>,
-      document.getElementById('hello-example')
+      <App/>,
+      document.getElementById('root')
     );
   </script>
 
