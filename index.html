@@ -21,6 +21,7 @@
             var img1 = document.getElementById("img1");
             EXIF.getData(img1, function() {
                 var orientation = EXIF.getTag(this, "Orientation");
+                console.log("imageElement:", this);
                 console.log("orientation:", orientation);
             });
         }
